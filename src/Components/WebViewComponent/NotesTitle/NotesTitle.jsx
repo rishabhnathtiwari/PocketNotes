@@ -24,9 +24,10 @@ const NotesTitle = ({title}) => {
 
   return (
     <>
-    <div className={`groupnamelogo ${
+    <div onClick={handleNameClick}
+     className={`groupnamelogo ${
         selected === title[0].name ? "highlightedName" : null
-      }`} onClick={handleNameClick}>
+      }`}>
 
 <div className="namelogo" style={{ backgroundColor: title[0].color }}>
         {nameInitals}

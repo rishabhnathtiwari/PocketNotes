@@ -1,5 +1,6 @@
-.sidebarweb{
-    width: 24vw;
+.sidebarweb {
+    width: 100%; 
+    max-width: 24vw; 
     height: 100vh;
 }
 
@@ -40,6 +41,9 @@
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
 }
+.ifsidebar-notes-titleisempty{  
+margin-left:55px;
+}
 
 .addnotesbtn>button{
     width: 80%;
@@ -58,4 +62,12 @@
 
 #plus-sign{
     font-size: 30px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .sidebarweb {
+        max-width: 100%; 
+    }
 }

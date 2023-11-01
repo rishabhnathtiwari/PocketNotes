@@ -15,6 +15,7 @@ const NotesWeb = () => {
     const [selectedTitle, setSelectedTitle] = useState("");
     const { notes, setNotes, selected } = usePocketContext();
   
+    
     useEffect(() => {
       setNotes(JSON.parse(localStorage.getItem(selected)) || []);
       const groupNames = JSON.parse(localStorage.getItem("groupNames"));
@@ -105,4 +106,4 @@ const NotesWeb = () => {
   )
 }
 
-export default NotesWeb
+export default NotesWeb;

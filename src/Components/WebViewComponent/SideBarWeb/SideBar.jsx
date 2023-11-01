@@ -7,43 +7,37 @@ import AddNotes from '../AddNotesPopup/AddNotes';
 
 const SideBar = () => {
 
-    const [title, settitle]=useState([]);
-    const[viewpopup,setviewpopup]=useState(false);
+  const [titles, setTitles] = useState([]);
+  const [viewPopup, setviewPopup] = useState(false);
+  const [groupNamesParent, setGroupNamesParent] = useState(() => {
+    const storedData = localStorage.getItem("groupNames");
+    return storedData ? JSON.parse(storedData) : [];
+  });
 
-    const [groupName, setGroupName] = useState(
-        localStorage.getItem("groupNames") || []
-      );
+  useEffect(() => {
+    const data = localStorage.getItem("groupNames");
+    if (data) {
+      setGroupNamesParent(JSON.parse(data));
+    } else {
+      setGroupNamesParent([]);
+    }
+  }, []);
 
+  useEffect(() => {
+    if (groupNamesParent.length > 0) {
+      const obj = JSON.parse(localStorage.getItem("groupNames"));
+      const result = Object.keys(obj).map((key) => [obj[key]]);
+      setTitles(result);
+    }
+  }, [groupNamesParent]);
 
-      
-      useEffect(() => {
-        const data = localStorage.getItem("groupNames");
-        if (data) {
-          setGroupName(JSON.parse(data));
-        } else {
-          setGroupName([]);
-        }
-      }, []);
+  const handleClicks = () => {
+    setviewPopup(true);
+  };
 
-    
-      useEffect(() => {
-        if (groupName.length > 0) {
-          const obj = JSON.parse(localStorage.getItem("groupNames"));
-          const result = Object.keys(obj).map((key) => [obj[key]]);
-          settitle(result);
-        }
-      }, [groupName]);
-    
-    
-
-    const handleClicks = () => {
-        setviewpopup(true);
-      };
-
-
-      const handleClose=()=>{
-        setviewpopup(false);
-      }
+  const handleClose = () => {
+    setviewPopup(false);
+  };
     
 
 
@@ -60,21 +54,22 @@ const SideBar = () => {
         </div>
         <div className="sidebarnotestitle">
 
-        {title.length > 0 ? (
-        title.map((title, index) => <NotesTitle key={index} title={title} />)
+        {titles.length > 0 ? (
+        titles.map((title, index) => <NotesTitle key={index} title={title} />)
         ) :
         (
         <div className="ifsidebar-notes-titleisempty">
-            <p>No Notes Group Created</p>
+            <p>No Notes Group Created </p>
         </div>
         )}
         </div>
 
-      {viewpopup && (
+
+      {viewPopup && (
         <div className="webpopupoverlay">
           <AddNotes
-            groupName={groupName}
-            setGroupName={setGroupName}
+            groupName={groupNamesParent}
+            setGroupName={setGroupNamesParent}
             onClose={handleClose}
           />
         </div>

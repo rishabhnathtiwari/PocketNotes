@@ -1,7 +1,7 @@
 .homeweb{
-
-    width: 75vw;
-    height: 100vh;
+    width:75%;
+    max-width: 75vw;
+    height: 100%;
     background-color: #F7ECDC;
     display: flex;
     flex-direction: column;
@@ -12,9 +12,9 @@
 }
 
 .homeweb>img{
-    margin-top: 25vh;
-    width: 35vw;
-    height: 35vh;
+    margin-top: 23vh;
+    width: 38vw;
+    height: 38vh;
 }
 
 .homeweb>h1>p{
@@ -35,4 +35,5 @@
 .encrypt-text>img{
     width: 1.2vw;
     height: 1.2vw;
+   
 }

@@ -2,36 +2,29 @@ import React, { useState } from "react";
 import './AddNotes.css';
 
 
-const AddNotes = ({groupNameParent,setGroupNameParent,onClose}) => {
+const AddNotes = ({ groupNamesParent, setGroupNamesParent, onClose }) => {
   
-    const [groupName, setGroupName] = useState("");
-    const [BGColor, setBGColor] = useState("");
-  
+  const [groupName, setGroupName] = useState("");
+  const [BGColor, setBGColor] = useState("");
 
-    const handleGroupName = (e) => {
-      setGroupName(e.target.value);
-    };
-  
-    const handleColorTheme = (e) => {
-      const div = e.target;
-      setBGColor(getComputedStyle(div).backgroundColor);
-    };
-  
-    const saveName = () => {
-      const newGroup = { name: groupName, color: BGColor };
-      setGroupNameParent([...groupNameParent, newGroup]);
-      localStorage.setItem(
-        "groupNames",
-        JSON.stringify([...groupNameParent, newGroup])
-      );
+  const handleGroupName = (e) => {
+    setGroupName(e.target.value);
+  };
 
-      onClose();
-     
+  const handleColorTheme = (e) => {
+    const div = e.target;
+    setBGColor(getComputedStyle(div).backgroundColor);
+  };
 
-
-
-
-};
+  const saveName = () => {
+    const newGroup = { name: groupName, color: BGColor };
+    setGroupNamesParent([...groupNamesParent, newGroup]);
+    localStorage.setItem(
+      "groupNames",
+      JSON.stringify([...groupNamesParent, newGroup])
+    );
+    onClose();
+  };
 
 
   return (
@@ -45,14 +38,14 @@ const AddNotes = ({groupNameParent,setGroupNameParent,onClose}) => {
           value={groupName}
           onChange={handleGroupName}
           type="text"
-          placeholder="Enter Group Name..."
+          placeholder="Enter Your Group Name..."
         />
 
 
       </div>
     
     <div className='popupcolors-input'>
-        <span>Group Color</span>
+        <span>Choose Color</span>
     
     <div className='popupcolor-inputcolor'>
         

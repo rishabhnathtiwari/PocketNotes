@@ -1,6 +1,6 @@
 .webpopup{
-    height: 12rem;
-    width: 25rem;
+    height: 15rem;
+    width: 29rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,23 +26,24 @@
 
 .popup-input{
     height: 2rem;
-    width: 23rem;
+    width: 25rem;
     font-size: 3vh;
     font-weight: 600;
     display: flex;
     gap: 2vw;
     align-items: center;
-    margin: 1vh 1vh 1vh 1vh;
+    margin: 1vh 1vh 1vh 6vh;
 }
 
 .popup-input>input{
-    width: 17vw;
+    width: 19vw;
     height: 3vh;
-    border: 2px solid grey;
-    border-radius: 6vh;
+    border: 1.5px solid #cccccc;
+    border-radius: 4vh;
     padding: 0.5rem;
-    font-size: 2vh;
-    font-weight: 600;
+    font-size: 1.9vh;
+    font-weight: 500;
+    
 }
 
 
@@ -51,9 +52,9 @@
     font-weight: 600;
     display: flex;
     justify-content: center;
-    gap: 3vw;
+    gap: 3.3vw;
     align-items: center;
-    margin: 2vh 1vh 1vh 1vh;
+    margin: 2vh 1.2vh 1vh 0vh;
 
 }
 
@@ -70,8 +71,8 @@
 .popupinputcolor-5,
 .popupinputcolor-6{
 
-    width: 3vh;
-    height: 3vh;
+    width: 3.8vh;
+    height: 3.8vh;
     border-radius: 50%;
     border: none;
     cursor: pointer;
@@ -117,12 +118,13 @@
   
   .popup-close > button {
     margin-top: 1rem;
+    margin-right:-1.8rem;
     height: 5vh;
-    width: 8vw;
+    width: 10vw;
     color: white;
     font-weight: 500;
     border: none;
-    border-radius: 4vh;
+    border-radius: 3vh;
     background-color: black;
   }
   
