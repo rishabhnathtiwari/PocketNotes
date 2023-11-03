@@ -10,8 +10,8 @@ const PocketContext = createContext({
 
 
 const Provider = ({ children }) => {
-  const [selected, setSelected] = useState("");
-  const [notes, setNotes] = useState([]); 
+  const [selected, setSelected] = useState(""); // eslint-disable-line
+  const [notes, setNotes] = useState([]); // eslint-disable-line
 
   const valueToShare = {
     notes,

@@ -1,27 +1,25 @@
-import React from 'react';
-import WebSideBar from '../../Components/WebViewComponent/SideBarWeb/SideBar';
-import WebHomePage from '../../Components/WebViewComponent/HomePageWeb/Homepage';
-import WebNotes from '../../Components/WebViewComponent/NotesContentWeb/NotesContent';
-import usePocketContext from '../../Hooks/pocketcontext';
-import './WebView.css';
+import React from "react";
+import "./WebView.css";
+import SidebarWeb from "../../Components/WebViewComponent/SideBarWeb/SideBar";
+import WebHome from "../../Components/WebViewComponent/HomePageWeb/Homepage";
+import WebNotes from "../../Components/WebViewComponent/NotesWeb/NotesCont";
+import usePocketContext from "../../Hooks/pocketcontext";
 
 
-const WebView = () => {
-
+function WebView() {
   const { selected } = usePocketContext();
 
   return (
-    <div className='WebView'>
-    <WebSideBar/>
-    {selected.length > 0 ? <WebNotes /> : <WebHomePage />}
+    <div className="WebView">
+      <SidebarWeb />
+
+      {selected.length > 0 ? <WebNotes /> : <WebHome />}
       
     </div>
   );
 }
 
 export default WebView;
-
-
 
 
 

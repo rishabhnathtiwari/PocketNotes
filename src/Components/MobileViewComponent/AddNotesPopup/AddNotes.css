@@ -1,0 +1,168 @@
+.mobilepopup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 90vw;
+  height: 35vh;
+  border-radius: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh;
+  z-index: 9999;
+}
+
+.mobilepopup-title {
+  text-align: left;
+  height: 5vh;
+  width: 90vw;
+  font-size: 3.2vh;
+  font-weight: 700;
+  margin-left: 5vw;
+}
+
+.mobilepopup-input {
+  height: 8vh;
+  width: 100%;
+  font-size: 4vw;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  align-items: center;
+  margin: 1vh 1vh 1vh 1vh;
+}
+
+.mobilepopup-input > input {
+    width: 60vw;
+    height: 3vh;
+    border: 2px solid grey;
+    border-radius: 6vh;
+    padding: 0.5rem;
+    font-size: 2vh;
+    font-weight: 600;
+}
+
+.mobilepopupcolor-input{
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+    align-items: center;
+}
+
+.mobilepopupcolor-input > span{
+    font-size: large;
+    font-weight: 600;
+}
+
+.mobilepopup-inputcolor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+.mobilepopupinputcolor-1,
+.mobilepopupinputcolor-2,
+.mobilepopupinputcolor-3,
+.mobilepopupinputcolor-4,
+.mobilepopupinputcolor-5,
+.mobilepopupinputcolor-6 {
+  width: 6vw;
+  height: 6vw;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: black;
+}
+
+.mobilepopupinputcolor-1{
+    background-color: #B38BFA;
+}
+
+.mobilepopupinputcolor-2{
+    background-color: #FF79F2;
+}
+
+.mobilepopupinputcolor-3{
+    background-color: #43E6FC;
+}
+
+.mobilepopupinputcolor-4{
+    background-color: #F19576;
+}
+
+.mobilepopupinputcolor-5{
+    background-color: #0047FF;
+}
+
+.mobilepopupinputcolor-6{
+    background-color: #6691FF;
+}
+
+.mobilepopup-close {
+  height: 5vh;
+  width: 90vw;
+  display: flex;
+  justify-content: flex-end;
+  margin: 1vh 1vh 1vh 1vh;
+}
+
+.mobilepopup-close > button {
+  margin-top: 1rem;
+  height: 6vh;
+  width: 25vw;
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 4vh;
+  background-color: black;
+}
+
+
+
+
+
+
+.highlightColor{
+    border: 2px solid black;
+    border-radius: 6vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
