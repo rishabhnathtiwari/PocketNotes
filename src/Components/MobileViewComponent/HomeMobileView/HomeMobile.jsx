@@ -1,22 +1,14 @@
 import React from "react";
 import "./HomeMobile.css";
-import BgImg from "../../../imagesassets/notes.jpg";
+
 
 function MobileHome() {
   return (
-    <div
-
-      className="homemobile"
-      
-      style={{
-        backgroundImage: `url(${BgImg})`,
-
-      }}
-      
-    >
+    <div className="homemobile">
       Create Your First Note...
     </div>
   );
 }
 
 export default MobileHome;
+
