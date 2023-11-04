@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import Enter from "../../assets/icons/enter.png";
-import Back from "../../assets/icons/back.png";
-import Home from "../../assets/home.png";
+import Enter from "../../../imagesassets/enter.png";
+import Back from "../../../imagesassets/back.png";
+import Home from "../../../imagesassets/home.png";
 import { useNavigate } from "react-router-dom";
 import "./NotesMobilePage.css";
-import MobileNotesContent from "../notesContentMobile/MobileNotesContent";
-import usePocketContext from "../../hooks/usePocketContext";
+import MobileNotesContent from "../../MobileViewComponent/NotesContentMobile/NotesContentMobile";
+import usePocketContext from "../../../Hooks/pocketcontext";
 
 
 
@@ -13,9 +13,13 @@ function NotesMobilePage() {
 
   const [text, setText] = useState("");
   const [ThemeColor, setThemeColor] = useState("#fff");
+
   const [initials, setInitials] = useState("");
+
   const [selectedTitle, setSelectedTitle] = useState("");
+
   const navigate = useNavigate();
+
   const { notes, setNotes, selected, setSelected } = usePocketContext();
 
 
@@ -147,12 +151,14 @@ function NotesMobilePage() {
 
 
       <div className="mobilenotes-input">
+
         <textarea
           value={text}
           placeholder="Enter your notes here"
           onChange={handleChange}
           onKeyDown={handleKeyDown}
         ></textarea>
+        
         <img src={Enter} alt="EnterIcon" onClick={handleSaveNotes} />
 
 

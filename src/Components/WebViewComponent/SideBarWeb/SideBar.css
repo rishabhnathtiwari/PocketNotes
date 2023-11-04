@@ -12,10 +12,16 @@
 }
 
 .addnotesbtn{
-    height: 11vh;
+    height: 12vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    
+}
+
+.addnotesbtn:hover{
+    cursor: pointer;
+    transform: translateY(1px);
 }
 
 

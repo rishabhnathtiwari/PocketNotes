@@ -5,8 +5,11 @@ import usePocketContext from "../../../Hooks/pocketcontext";
 
 function MobileNotes({ title }) {
 
+
+
   const navigate = useNavigate();
   const { setSelected } = usePocketContext();
+  
 
   // checks to ensure that title and title[0] are defined
   if (title && title[0] && title[0].name) {
@@ -25,7 +28,7 @@ function MobileNotes({ title }) {
     const handleNameClick = () => {
       localStorage.setItem("selected", title[0].name);
       setSelected(title[0].name);
-      navigate("/notes");
+      navigate("/notespagemobile");
     };
 
 

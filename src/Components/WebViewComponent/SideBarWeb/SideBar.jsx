@@ -15,7 +15,6 @@ function Sidebar() {
     localStorage.getItem("groupNames") || []
   );
 
-
   useEffect(() => {
     const data = localStorage.getItem("groupNames");
     if (data) {
@@ -44,13 +43,13 @@ function Sidebar() {
     setviewPopup(false);
   };
 
-
   
   return (
             
             
     <div className="sidebarweb">
     <div className="sidebarwebheading">Pocket Notes</div>
+
     <div className="addnotesbtn">
       <button onClick={handleClick}>
 
@@ -65,6 +64,7 @@ function Sidebar() {
     <div className="sidebarnotestitle">
       {titles.length > 0 ? (
         titles.map((title, index) => <NotesTitle key={index} title={title} />)
+        
       ) : (
         <div className="ifsidebar-notes-titleisempty">
           <p>No Notes Group Created</p>

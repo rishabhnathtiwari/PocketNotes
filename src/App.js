@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Provider } from "./Context/pocketcontext";
 import usePocketContext from "./Hooks/pocketcontext";
 import MobileView from "./ViewDevice/MobileView/MobileView.jsx";
-import NotesMobilePage from "./Components/MobileViewComponent/NotesMobile/NotesM.jsx";
+import NotesPageMobile from "./Components/MobileViewComponent/NotesPageMobile/NotesMobilePage.jsx";
 
 
 function App() {
@@ -40,7 +40,7 @@ function App() {
             <Routes>
 
               <Route path="/" element={<MobileView />} />
-              <Route path="/notes" element={<NotesMobilePage />} />
+              <Route path="/notespagemobile" element={<NotesPageMobile />} />
 
             </Routes>
           </Router>
